@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" width="100%" role="img" aria-label="Tetris">
+<style>.s{transform-box:fill-box;transform-origin:center;animation:s 1.2s linear infinite}@keyframes s{to{transform:rotate(360deg)}}
+.p{animation:p 1.6s ease-in-out infinite}@keyframes p{50%{opacity:.4}}</style>
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#f472b6"/></linearGradient></defs>
+<rect x="1" y="1" width="998" height="428" rx="20" fill="#0b0f1a" stroke="url(#g)" stroke-opacity=".5" stroke-width="2"/>
+<circle cx="500.0" cy="193.0" r="20" fill="none" stroke="#1f2937" stroke-width="5"/>
+<circle cx="500.0" cy="193.0" r="20" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round" stroke-dasharray="40 86" class="s"/>
+<text x="500.0" y="245.0" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#e6edf3" class="p">Generating Tetris …</text>
+<text x="500.0" y="269.0" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#8b949e">Appears automatically after the first workflow run</text>
+</svg>

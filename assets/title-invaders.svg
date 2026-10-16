@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 80" width="100%" role="img" aria-label="SPACE INVADERS">
+<defs>
+  <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="318.0" x2="682.0" spreadMethod="repeat">
+    <stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="0 0;364 0;0 0" dur="6s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="ll" gradientUnits="userSpaceOnUse" x1="60" x2="272.0"><stop offset="0" stop-color="#a78bfa" stop-opacity="0"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  <linearGradient id="lr" gradientUnits="userSpaceOnUse" x1="728.0" x2="940"><stop offset="0" stop-color="#f472b6"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></linearGradient>
+</defs>
+<style>
+  .dot{animation:dl 3s ease-in-out infinite}
+  .dot2{animation-name:dr}
+  @keyframes dl{0%{transform:translateX(0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(212px);opacity:0}}
+  @keyframes dr{0%{transform:translateX(0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(-212px);opacity:0}}
+  .ic{animation:spin 8s linear infinite;transform-box:fill-box;transform-origin:center}
+  @keyframes spin{to{transform:rotate(360deg)}}
+</style>
+<line x1="60" y1="40.0" x2="272.0" y2="40.0" stroke="url(#ll)" stroke-width="2"/>
+<line x1="728.0" y1="40.0" x2="940" y2="40.0" stroke="url(#lr)" stroke-width="2"/>
+<circle cx="60" cy="40.0" r="4" fill="#22d3ee" class="dot"/>
+<circle cx="940" cy="40.0" r="4" fill="#f472b6" class="dot dot2"/>
+<text x="292.0" y="48.0" text-anchor="middle" font-size="22" fill="#22d3ee" class="ic">◆</text>
+<text x="708.0" y="48.0" text-anchor="middle" font-size="22" fill="#f472b6" class="ic">◆</text>
+<text x="318.0" y="49.0" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Ubuntu, Arial, sans-serif" font-size="26" font-weight="800" fill="url(#g)" textLength="364" lengthAdjust="spacing" class="t">SPACE INVADERS</text>
+</svg>
