@@ -1,8 +1,8 @@
-name: Profil-Grafiken
+name: Profile graphics
 
 on:
   schedule:
-    - cron: "17 3 * * *"   # täglich ~05:17 Uhr deutscher Zeit
+    - cron: "17 3 * * *"   # daily, ~05:17 German time
   workflow_dispatch:
   push:
     branches: [main]
@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: profile-assets
+  group: profile-graphics
   cancel-in-progress: false
 
 jobs:
@@ -23,41 +23,35 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - name: Repository auschecken
+      - name: Check out repository
         uses: actions/checkout@v5
 
-      - name: Statistik-Dashboard erzeugen
+      - name: Generate dashboard, Space Invaders, Tetris and repo system
         continue-on-error: true
-        run: python3 scripts/generate_dashboard.py
+        run: python3 scripts/generate.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: Paul-Sixt
 
-      - name: 3D-Contribution-Graph erzeugen
+      - name: Generate 3D contribution graph
         continue-on-error: true
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: Paul-Sixt
 
-      - name: Snake erzeugen
-        continue-on-error: true
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: Paul-Sixt
-          outputs: |
-            generated/snake.svg?color_snake=#7c3aed&color_dots=#ebedf0,#e9d5ff,#c084fc,#9333ea,#6b21a8
-            generated/snake-dark.svg?palette=github-dark&color_snake=#22d3ee&color_dots=#161b22,#2e1065,#5b21b6,#8b5cf6,#c4b5fd
+      - name: Remove old snake files
+        run: rm -f generated/snake.svg generated/snake-dark.svg
 
-      - name: Änderungen speichern
+      - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add generated profile-3d-contrib
+          git add -A generated profile-3d-contrib
           if git diff --staged --quiet; then
-            echo "Keine Änderungen."
+            echo "No changes."
           else
-            git commit -m "Profil-Grafiken aktualisieren"
+            git commit -m "Update profile graphics"
             git pull --rebase
             git push
           fi
