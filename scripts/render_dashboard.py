@@ -1,7 +1,7 @@
 """Animated GitHub stats dashboard."""
 from html import escape
 
-from common import SANS, MONO, CYAN, VIOLET, MAGENTA, EMERALD, AMBER, PALETTE as FALLBACK_COLORS
+from common import plural, SANS, MONO, CYAN, VIOLET, MAGENTA, EMERALD, AMBER, PALETTE as FALLBACK_COLORS
 
 
 # ------------------------------------------------------------------ render
@@ -71,7 +71,7 @@ def render(s, updated):
           style="--off:{circ * (1 - frac):.1f}" filter="url(#glow)"/>
   {rolling_number(s["current"], cx, cy + 14, 44, "ring", 0.9, "#f0f6fc")}
   <text x="{cx}" y="{cy + 40}" text-anchor="middle" font-family="{SANS}" font-size="12" font-weight="700" letter-spacing="2" fill="#8b949e">DAY STREAK</text>
-  <text x="{cx}" y="{py + ph - 22}" text-anchor="middle" font-family="{SANS}" font-size="13" fill="#c9d1d9">Longest streak: <tspan font-weight="800" fill="{MAGENTA}">{fmt(s["longest"])} days</tspan></text>
+  <text x="{cx}" y="{py + ph - 22}" text-anchor="middle" font-family="{SANS}" font-size="13" fill="#c9d1d9">Longest streak: <tspan font-weight="800" fill="{MAGENTA}">{plural(s["longest"], "day")}</tspan></text>
 </g>''')
 
     # languages
@@ -116,7 +116,7 @@ def render(s, updated):
     parts.append(f'''<g class="pop" style="animation-delay:.9s">
   <rect x="{ax}" y="{ay}" width="{aw}" height="{ah}" rx="16" fill="#111827" stroke="#1f2937"/>
   <text x="{ax + 20}" y="{ay + 30}" font-family="{MONO}" font-size="13" fill="#8b949e">// last 30 days</text>
-  <text x="{ax + aw - 20}" y="{ay + 30}" text-anchor="end" font-family="{SANS}" font-size="13" fill="#c9d1d9"><tspan font-weight="800" fill="{CYAN}">{fmt(sum(vals))}</tspan> contributions</text>
+  <text x="{ax + aw - 20}" y="{ay + 30}" text-anchor="end" font-family="{SANS}" font-size="13" fill="#c9d1d9"><tspan font-weight="800" fill="{CYAN}">{fmt(sum(vals))}</tspan> {"contribution" if sum(vals) == 1 else "contributions"}</text>
   <line x1="{ax + 20}" y1="{ay + ah - 18}" x2="{ax + aw - 20}" y2="{ay + ah - 18}" stroke="#30363d"/>''')
     base = ay + ah - 18
     maxh = ah - 62

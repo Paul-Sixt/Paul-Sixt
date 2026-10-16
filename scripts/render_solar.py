@@ -130,7 +130,7 @@ def render(data):
     total_stars = sum(p["stars"] for p in repos)
     body.append(f'''<g font-family="{MONO}" font-size="14" font-weight="700" letter-spacing="2">
   <text x="36" y="44" fill="{CYAN}">REPO SYSTEM</text><text x="168" y="44" fill="#e6edf3">{esc(data["user"].upper())}</text>
-  <text x="{W - 36}" y="44" text-anchor="end" fill="#e6edf3">{n} <tspan fill="{MAGENTA}">PLANETS</tspan> · {total_stars} <tspan fill="{AMBER}">STARS</tspan></text>
+  <text x="{W - 36}" y="44" text-anchor="end" fill="#e6edf3">{n} <tspan fill="{MAGENTA}">{"PLANET" if n == 1 else "PLANETS"}</tspan> · {total_stars} <tspan fill="{AMBER}">{"STAR" if total_stars == 1 else "STARS"}</tspan></text>
 </g>''')
     if n:
         legend, seen, lx = [], [], 36

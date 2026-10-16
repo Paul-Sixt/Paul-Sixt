@@ -2,7 +2,7 @@
 import math
 import random
 
-from common import MONO, SANS, CYAN, VIOLET, MAGENTA, AMBER, LEVEL_COLORS, card, pct, esc, stars
+from common import plural, MONO, SANS, CYAN, VIOLET, MAGENTA, AMBER, LEVEL_COLORS, card, pct, esc, stars
 
 W, H = 1000, 560
 PITCH, CELL = 17, 13
@@ -199,7 +199,7 @@ def render(data):
                    f"{P(t_clear + 0.6)}%{{transform:scale(1)}}{P(T - 0.7)}%{{opacity:1;transform:scale(1)}}{P(T - 0.25)}%,100%{{opacity:0;transform:scale(1.3)}}}}")
         body.append(f'''<g class="clear">
   <text x="{W/2}" y="300" text-anchor="middle" font-family="{SANS}" font-size="54" font-weight="900" letter-spacing="6" fill="url(#txt)" filter="url(#glow)">WAVE CLEARED</text>
-  <text x="{W/2}" y="338" text-anchor="middle" font-family="{MONO}" font-size="16" letter-spacing="4" fill="#c9d1d9">{data["contributions"]:,} CONTRIBUTIONS DESTROYED</text>
+  <text x="{W/2}" y="338" text-anchor="middle" font-family="{MONO}" font-size="16" letter-spacing="4" fill="#c9d1d9">{plural(data["contributions"], "CONTRIBUTION")} DESTROYED</text>
 </g>''')
         css.append(f".clear{{opacity:0;animation:clear {T:.3f}s linear infinite;transform-box:fill-box;transform-origin:center}}")
     else:

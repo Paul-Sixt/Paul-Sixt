@@ -40,8 +40,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: Paul-Sixt
 
-      - name: Remove old snake files
-        run: rm -f generated/snake.svg generated/snake-dark.svg
+      - name: Keep only the graphics the README uses
+        run: |
+          find profile-3d-contrib -type f ! -name profile-night-rainbow.svg ! -name profile-green-animate.svg -delete || true
 
       - name: Commit changes
         run: |

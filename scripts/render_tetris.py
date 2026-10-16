@@ -1,7 +1,7 @@
 """Contribution Tetris: neon blocks fall and stack into the real contribution graph."""
 import random
 
-from common import MONO, SANS, CYAN, VIOLET, MAGENTA, AMBER, EMERALD, BLUE, ROSE, card, pct, esc, stars
+from common import plural, MONO, SANS, CYAN, VIOLET, MAGENTA, AMBER, EMERALD, BLUE, ROSE, card, pct, esc, stars
 
 W, H = 1000, 430
 PITCH, CELL = 17, 15
@@ -130,7 +130,7 @@ def render(data):
     css.append(f"@keyframes banner{{0%,{P(t_full)}%{{opacity:0;transform:translateY(14px) scale(.8)}}{P(t_full + 0.4)}%{{opacity:1;transform:none}}"
                f"{P(t_hold + 1.6)}%{{opacity:1;transform:none}}{P(t_hold + 2.1)}%,100%{{opacity:0;transform:scale(1.15)}}}}")
     label = "PERFECT STACK" if n else "AWAITING FIRST BLOCKS"
-    sub = f"{n} PIECES · {sum(len(p) for p in pieces)} ACTIVE DAYS" if n else "COMMIT SOMETHING TO START THE GAME"
+    sub = f"{plural(n, 'PIECE')} · {plural(sum(len(p) for p in pieces), 'ACTIVE DAY')}" if n else "COMMIT SOMETHING TO START THE GAME"
     body.append(f'''<g class="banner">
   <text x="{W/2}" y="{SPAWN_Y + 52}" text-anchor="middle" font-family="{SANS}" font-size="44" font-weight="900" letter-spacing="6" fill="url(#txt)" filter="url(#glow)">{label}</text>
   <text x="{W/2}" y="{SPAWN_Y + 82}" text-anchor="middle" font-family="{MONO}" font-size="15" letter-spacing="4" fill="#c9d1d9">{sub}</text>

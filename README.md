@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/terminal.svg" alt="Terminal" width="88%" />
+  <img src="./assets/console.svg" alt="Terminal" width="88%" />
 </p>
 
 <br />
@@ -62,7 +62,7 @@
 <br />
 
 <p align="center">
-  <img src="./assets/footer.svg" alt="Thanks for stopping by" width="100%" />
+  <img src="./assets/outro.svg" alt="Thanks for stopping by" width="100%" />
 </p>
 
 <p align="center">

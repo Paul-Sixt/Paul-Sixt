@@ -20,6 +20,11 @@ def fmt(n):
     return f"{n:,}"
 
 
+def plural(n, word, suffix="s"):
+    """'1 day' / '2 days' (keeps the word's case)."""
+    return f"{n:,} {word}{'' if n == 1 else (suffix.upper() if word.isupper() else suffix)}"
+
+
 def pct(t, total):
     """Seconds -> keyframe percentage string, clamped to 0..100."""
     return f"{max(0.0, min(100.0, t / total * 100)):.3f}"
