@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 362" width="100%" role="img" aria-label="Terminal">
+<defs>
+  <linearGradient id="tb" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+  <clipPath id="win"><rect width="1000" height="362" rx="16"/></clipPath>
+</defs>
+<style>
+  @keyframes p0{0%,4.54%{opacity:0}4.62%,100%{opacity:1}}@keyframes c0{0%,7.31%{transform:translateX(0);animation-timing-function:steps(6,end)}10.77%,100%{transform:translateX(78.8px)}}@keyframes k0{0%,4.54%{opacity:0}4.62%,10.77%{opacity:1}10.85%,100%{opacity:0}}@keyframes o0{0%,14.15%{opacity:0;transform:translateY(6px)}14.23%{opacity:1;transform:none}100%{opacity:1}}@keyframes p1{0%,18.77%{opacity:0}18.85%,100%{opacity:1}}@keyframes c1{0%,21.54%{transform:translateX(0);animation-timing-function:steps(13,end)}29.04%,100%{transform:translateX(154.4px)}}@keyframes k1{0%,18.77%{opacity:0}18.85%,29.04%{opacity:1}29.12%,100%{opacity:0}}@keyframes o1{0%,32.42%{opacity:0;transform:translateY(6px)}32.50%{opacity:1;transform:none}100%{opacity:1}}@keyframes p2{0%,37.04%{opacity:0}37.12%,100%{opacity:1}}@keyframes c2{0%,39.81%{transform:translateX(0);animation-timing-function:steps(20,end)}51.35%,100%{transform:translateX(230.0px)}}@keyframes k2{0%,37.04%{opacity:0}37.12%,51.35%{opacity:1}51.42%,100%{opacity:0}}@keyframes o2{0%,54.73%{opacity:0;transform:translateY(6px)}54.81%{opacity:1;transform:none}100%{opacity:1}}@keyframes pf{0%,59.35%{opacity:0}59.42%,100%{opacity:1}}
+  .all{animation:all 13.0s linear infinite}
+  @keyframes all{0%,92%{opacity:1}96%,100%{opacity:0}}
+  .blink{animation:bl 1s steps(1) infinite}
+  @keyframes bl{50%{opacity:0}}
+  .scan{animation:scan 5s linear infinite}
+  @keyframes scan{from{transform:translateY(-60px)}to{transform:translateY(362px)}}
+</style>
+<g clip-path="url(#win)">
+  <rect width="1000" height="362" fill="#0d1117"/>
+  <rect width="1000" height="44" fill="#161b22"/>
+  <rect y="44" width="1000" height="1" fill="#30363d"/>
+  <circle cx="26" cy="22" r="7" fill="#ff5f57"/><circle cx="50" cy="22" r="7" fill="#febc2e"/><circle cx="74" cy="22" r="7" fill="#28c840"/>
+  <text x="500.0" y="27" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="14" fill="#8b949e">paul-sixt@github: ~</text>
+  <g class="all"><g style="animation:p0 13.0s linear infinite">
+  <text x="34" y="100" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#22d3ee">~</text>
+  <text x="56" y="100" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#f472b6">❯</text>
+  <text x="92" y="100" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#e6edf3" textLength="64.8" lengthAdjust="spacing">whoami</text>
+  <g style="animation:c0 13.0s infinite">
+    <rect x="92" y="82" width="104.8" height="26" fill="#0d1117"/>
+    <rect x="92" y="84" width="10" height="21" fill="#22d3ee" style="animation:k0 13.0s linear infinite"/>
+  </g>
+</g>
+<text x="92" y="132" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#34d399" style="animation:o0 13.0s ease-out infinite">paul-sixt</text><g style="animation:p1 13.0s linear infinite">
+  <text x="34" y="176" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#22d3ee">~</text>
+  <text x="56" y="176" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#f472b6">❯</text>
+  <text x="92" y="176" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#e6edf3" textLength="140.4" lengthAdjust="spacing">cat motto.txt</text>
+  <g style="animation:c1 13.0s infinite">
+    <rect x="92" y="158" width="180.4" height="26" fill="#0d1117"/>
+    <rect x="92" y="160" width="10" height="21" fill="#22d3ee" style="animation:k1 13.0s linear infinite"/>
+  </g>
+</g>
+<text x="92" y="208" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#a78bfa" style="animation:o1 13.0s ease-out infinite">»Code. Learn. Repeat.«</text><g style="animation:p2 13.0s linear infinite">
+  <text x="34" y="252" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#22d3ee">~</text>
+  <text x="56" y="252" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#f472b6">❯</text>
+  <text x="92" y="252" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#e6edf3" textLength="216.0" lengthAdjust="spacing">git log --oneline -1</text>
+  <g style="animation:c2 13.0s infinite">
+    <rect x="92" y="234" width="256.0" height="26" fill="#0d1117"/>
+    <rect x="92" y="236" width="10" height="21" fill="#22d3ee" style="animation:k2 13.0s linear infinite"/>
+  </g>
+</g>
+<text x="92" y="284" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#fbbf24" style="animation:o2 13.0s ease-out infinite">a1f3c9e (HEAD -&gt; main) 🚀 immer am Bauen von etwas Neuem</text><g style="animation:pf 13.0s linear infinite">
+  <text x="34" y="328" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#22d3ee">~</text>
+  <text x="56" y="328" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="18" fill="#f472b6">❯</text>
+  <rect x="92" y="312" width="10" height="21" fill="#22d3ee" class="blink"/>
+</g></g>
+  <rect class="scan" width="1000" height="60" fill="url(#tb)" opacity=".035"/>
+</g>
+<rect x="1" y="1" width="998" height="360" rx="15" fill="none" stroke="url(#tb)" stroke-opacity=".55" stroke-width="2"/>
+</svg>

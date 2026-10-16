@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" role="img" aria-label="Paul-Sixt">
+<defs>
+  <clipPath id="card"><rect width="1200" height="420" rx="26"/></clipPath>
+  <clipPath id="ground"><rect y="300" width="1200" height="120"/></clipPath>
+  <clipPath id="tclip"><text x="600.0" y="196" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Ubuntu, Arial, sans-serif" font-size="116" font-weight="900" letter-spacing="6">PAUL-SIXT</text></clipPath>
+  <linearGradient id="tg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0" spreadMethod="repeat">
+    <stop offset="0" stop-color="#22d3ee"/><stop offset=".33" stop-color="#a78bfa"/>
+    <stop offset=".66" stop-color="#f472b6"/><stop offset="1" stop-color="#22d3ee"/>
+    <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="1200 0" dur="7s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="420">
+    <stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/>
+  </linearGradient>
+  <linearGradient id="shine" x1="0" x2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#000"/><stop offset=".35" stop-color="#555"/><stop offset="1" stop-color="#fff"/>
+  </linearGradient>
+  <mask id="gmask"><rect y="300" width="1200" height="120" fill="url(#fade)"/></mask>
+  <radialGradient id="sky" cx=".5" cy=".75" r=".8">
+    <stop offset="0" stop-color="#1a1240"/><stop offset=".6" stop-color="#0a0f22"/><stop offset="1" stop-color="#05070f"/>
+  </radialGradient>
+  <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="70"/></filter>
+  <filter id="glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+</defs>
+<style>
+  .blob{animation:drift 16s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}
+  .b2{animation-duration:21s;animation-direction:alternate-reverse}
+  .b3{animation-duration:26s}
+  @keyframes drift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(140px,-40px) scale(1.25)}100%{transform:translate(-120px,30px) scale(.9)}}
+  .star{animation:tw 4s ease-in-out infinite}
+  @keyframes tw{0%,100%{opacity:.15}50%{opacity:1}}
+  .glyph{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace;font-size:20px;opacity:0;animation:float 9s linear infinite}
+  @keyframes float{0%{opacity:0;transform:translateY(30px)}20%{opacity:.35}80%{opacity:.25}100%{opacity:0;transform:translateY(-90px)}}
+  .grid line{stroke:#a78bfa;stroke-width:1.2}
+  .hl{animation:fall 3.5s cubic-bezier(.55,0,1,.45) infinite}
+  @keyframes fall{0%{transform:translateY(0)}100%{transform:translateY(120px)}}
+  .run{stroke-dasharray:320 2950;animation:run 9s linear infinite}
+  @keyframes run{to{stroke-dashoffset:-3270}}
+  .sweep{animation:sweep 6s ease-in-out infinite}
+  @keyframes sweep{0%{transform:translateX(-500px) skewX(-20deg)}55%,100%{transform:translateX(1500px) skewX(-20deg)}}
+  .gl{opacity:0;animation:glitch 6s steps(1) infinite}
+  .gl2{animation-name:glitch2}
+  @keyframes glitch{0%,88%,100%{opacity:0;transform:none}89%{opacity:.8;transform:translate(-6px,2px)}91%{opacity:.8;transform:translate(5px,-3px)}93%{opacity:.6;transform:translate(-3px,0)}95%{opacity:0}}
+  @keyframes glitch2{0%,88%,100%{opacity:0;transform:none}89%{opacity:.8;transform:translate(6px,-2px)}91%{opacity:.8;transform:translate(-5px,3px)}93%{opacity:.6;transform:translate(4px,1px)}95%{opacity:0}}
+  .title{animation:jolt 6s steps(1) infinite}
+  @keyframes jolt{0%,88%,95%,100%{transform:none}90%{transform:translateX(3px)}92%{transform:translateX(-2px)}}
+  .pulse{animation:pulse 4s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:.35}50%{opacity:.7}}
+  .sub{animation:rise 1.2s .4s ease-out both}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .cur{animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+</style>
+<g clip-path="url(#card)">
+  <rect width="1200" height="420" fill="url(#sky)"/>
+  <g filter="url(#blur)" opacity=".75">
+    <circle class="blob" cx="260" cy="150" r="170" fill="#a78bfa"/>
+    <circle class="blob b2" cx="900" cy="120" r="150" fill="#22d3ee" opacity=".7"/>
+    <circle class="blob b3" cx="620" cy="320" r="190" fill="#f472b6" opacity=".55"/>
+  </g>
+  <circle cx="395.6" cy="55.0" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-0.36s;animation-duration:4.11s"/><circle cx="444.2" cy="30.4" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-0.19s;animation-duration:3.80s"/><circle cx="101.0" cy="39.0" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-0.30s;animation-duration:4.20s"/><circle cx="1119.0" cy="182.1" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-2.89s;animation-duration:3.69s"/><circle cx="1152.5" cy="27.3" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-1.45s;animation-duration:2.93s"/><circle cx="156.6" cy="96.7" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-0.52s;animation-duration:4.21s"/><circle cx="237.9" cy="40.8" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-2.82s;animation-duration:4.36s"/><circle cx="595.8" cy="155.9" r="1.4" fill="#e2e8f0" class="star" style="animation-delay:-2.33s;animation-duration:5.27s"/><circle cx="439.4" cy="80.8" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-3.49s;animation-duration:3.23s"/><circle cx="686.3" cy="154.2" r="1.4" fill="#e2e8f0" class="star" style="animation-delay:-3.65s;animation-duration:3.36s"/><circle cx="1157.0" cy="46.3" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-0.82s;animation-duration:3.53s"/><circle cx="1102.6" cy="126.8" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-3.82s;animation-duration:4.22s"/><circle cx="1035.6" cy="98.1" r="1.4" fill="#e2e8f0" class="star" style="animation-delay:-2.97s;animation-duration:4.24s"/><circle cx="549.2" cy="237.6" r="1.4" fill="#e2e8f0" class="star" style="animation-delay:-2.37s;animation-duration:4.49s"/><circle cx="90.4" cy="200.9" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-1.42s;animation-duration:3.66s"/><circle cx="795.6" cy="21.0" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-1.78s;animation-duration:4.33s"/><circle cx="592.7" cy="72.8" r="1.4" fill="#e2e8f0" class="star" style="animation-delay:-0.65s;animation-duration:3.24s"/><circle cx="473.5" cy="245.9" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-0.83s;animation-duration:3.70s"/><circle cx="342.3" cy="51.3" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-4.32s;animation-duration:3.34s"/><circle cx="501.7" cy="110.1" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-4.79s;animation-duration:2.95s"/><circle cx="224.4" cy="76.5" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-0.06s;animation-duration:4.99s"/><circle cx="231.5" cy="89.7" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-2.09s;animation-duration:3.61s"/><circle cx="677.0" cy="267.6" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-2.28s;animation-duration:5.11s"/><circle cx="1124.2" cy="195.4" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-1.99s;animation-duration:3.68s"/><circle cx="578.6" cy="121.1" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-0.34s;animation-duration:3.13s"/><circle cx="208.3" cy="105.1" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-0.51s;animation-duration:4.20s"/><circle cx="642.5" cy="266.5" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-0.35s;animation-duration:3.12s"/><circle cx="456.4" cy="183.1" r="1.4" fill="#e2e8f0" class="star" style="animation-delay:-3.01s;animation-duration:3.92s"/><circle cx="153.8" cy="144.3" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-2.40s;animation-duration:3.44s"/><circle cx="187.2" cy="213.7" r="1.4" fill="#e2e8f0" class="star" style="animation-delay:-2.39s;animation-duration:4.58s"/><circle cx="618.9" cy="69.4" r="1.4" fill="#e2e8f0" class="star" style="animation-delay:-0.73s;animation-duration:4.13s"/><circle cx="51.4" cy="154.9" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-3.48s;animation-duration:3.28s"/><circle cx="445.4" cy="59.3" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-2.66s;animation-duration:4.84s"/><circle cx="402.4" cy="74.1" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-4.03s;animation-duration:4.95s"/><circle cx="878.3" cy="75.1" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-1.78s;animation-duration:2.59s"/><circle cx="52.4" cy="89.0" r="1.4" fill="#e2e8f0" class="star" style="animation-delay:-0.97s;animation-duration:4.32s"/><circle cx="419.4" cy="229.3" r="1.4" fill="#e2e8f0" class="star" style="animation-delay:-4.78s;animation-duration:3.59s"/><circle cx="275.7" cy="75.1" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-1.69s;animation-duration:3.95s"/><circle cx="1162.9" cy="176.7" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-2.40s;animation-duration:4.46s"/><circle cx="947.6" cy="37.5" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-4.55s;animation-duration:4.85s"/><circle cx="890.2" cy="141.7" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-2.17s;animation-duration:4.41s"/><circle cx="120.6" cy="265.7" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-2.32s;animation-duration:4.73s"/><circle cx="118.5" cy="57.1" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-0.14s;animation-duration:4.27s"/><circle cx="559.8" cy="188.8" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-3.29s;animation-duration:3.55s"/><circle cx="656.4" cy="49.7" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-4.00s;animation-duration:4.68s"/><circle cx="139.2" cy="213.6" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-2.17s;animation-duration:5.12s"/><circle cx="978.3" cy="70.9" r="1.4" fill="#e2e8f0" class="star" style="animation-delay:-1.06s;animation-duration:4.00s"/><circle cx="905.9" cy="101.4" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-4.17s;animation-duration:2.68s"/><circle cx="878.3" cy="252.9" r="1.8" fill="#e2e8f0" class="star" style="animation-delay:-4.14s;animation-duration:5.13s"/><circle cx="171.7" cy="55.2" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-4.36s;animation-duration:4.83s"/><circle cx="725.9" cy="220.7" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-0.86s;animation-duration:3.92s"/><circle cx="861.2" cy="162.5" r="1.4" fill="#e2e8f0" class="star" style="animation-delay:-3.41s;animation-duration:4.09s"/><circle cx="579.7" cy="220.8" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-1.24s;animation-duration:3.33s"/><circle cx="915.8" cy="149.5" r="0.8" fill="#e2e8f0" class="star" style="animation-delay:-3.80s;animation-duration:5.24s"/><circle cx="534.2" cy="177.3" r="1.1" fill="#e2e8f0" class="star" style="animation-delay:-3.46s;animation-duration:3.86s"/>
+  <text x="81" y="201" class="glyph" fill="#22d3ee" style="animation-delay:-8.47s">&lt;/&gt;</text><text x="200" y="269" class="glyph" fill="#a78bfa" style="animation-delay:-8.48s">{ }</text><text x="294" y="215" class="glyph" fill="#f472b6" style="animation-delay:-8.49s">=&gt;</text><text x="430" y="143" class="glyph" fill="#22d3ee" style="animation-delay:-1.09s">( )</text><text x="526" y="132" class="glyph" fill="#a78bfa" style="animation-delay:-2.17s">[ ]</text><text x="623" y="234" class="glyph" fill="#f472b6" style="animation-delay:-7.06s">#</text><text x="768" y="146" class="glyph" fill="#22d3ee" style="animation-delay:-6.45s">&amp;&amp;</text><text x="870" y="144" class="glyph" fill="#a78bfa" style="animation-delay:-7.95s">::</text><text x="995" y="157" class="glyph" fill="#f472b6" style="animation-delay:-8.57s">λ</text><text x="1084" y="203" class="glyph" fill="#22d3ee" style="animation-delay:-8.91s">∑</text>
+  <ellipse cx="600.0" cy="300" rx="520" ry="26" fill="#f472b6" class="pulse" filter="url(#glow)"/>
+  <g class="grid" clip-path="url(#ground)" mask="url(#gmask)">
+    <rect y="300" width="1200" height="120" fill="#0b0720" opacity=".6"/>
+    <line x1="502.0" y1="300" x2="-730.0" y2="420"/><line x1="509.0" y1="300" x2="-635.0" y2="420"/><line x1="516.0" y1="300" x2="-540.0" y2="420"/><line x1="523.0" y1="300" x2="-445.0" y2="420"/><line x1="530.0" y1="300" x2="-350.0" y2="420"/><line x1="537.0" y1="300" x2="-255.0" y2="420"/><line x1="544.0" y1="300" x2="-160.0" y2="420"/><line x1="551.0" y1="300" x2="-65.0" y2="420"/><line x1="558.0" y1="300" x2="30.0" y2="420"/><line x1="565.0" y1="300" x2="125.0" y2="420"/><line x1="572.0" y1="300" x2="220.0" y2="420"/><line x1="579.0" y1="300" x2="315.0" y2="420"/><line x1="586.0" y1="300" x2="410.0" y2="420"/><line x1="593.0" y1="300" x2="505.0" y2="420"/><line x1="600.0" y1="300" x2="600.0" y2="420"/><line x1="607.0" y1="300" x2="695.0" y2="420"/><line x1="614.0" y1="300" x2="790.0" y2="420"/><line x1="621.0" y1="300" x2="885.0" y2="420"/><line x1="628.0" y1="300" x2="980.0" y2="420"/><line x1="635.0" y1="300" x2="1075.0" y2="420"/><line x1="642.0" y1="300" x2="1170.0" y2="420"/><line x1="649.0" y1="300" x2="1265.0" y2="420"/><line x1="656.0" y1="300" x2="1360.0" y2="420"/><line x1="663.0" y1="300" x2="1455.0" y2="420"/><line x1="670.0" y1="300" x2="1550.0" y2="420"/><line x1="677.0" y1="300" x2="1645.0" y2="420"/><line x1="684.0" y1="300" x2="1740.0" y2="420"/><line x1="691.0" y1="300" x2="1835.0" y2="420"/><line x1="698.0" y1="300" x2="1930.0" y2="420"/>
+    <line x1="0" y1="300" x2="1200" y2="300" class="hl" style="animation-delay:-0.00s"/><line x1="0" y1="300" x2="1200" y2="300" class="hl" style="animation-delay:-0.50s"/><line x1="0" y1="300" x2="1200" y2="300" class="hl" style="animation-delay:-1.00s"/><line x1="0" y1="300" x2="1200" y2="300" class="hl" style="animation-delay:-1.50s"/><line x1="0" y1="300" x2="1200" y2="300" class="hl" style="animation-delay:-2.00s"/><line x1="0" y1="300" x2="1200" y2="300" class="hl" style="animation-delay:-2.50s"/><line x1="0" y1="300" x2="1200" y2="300" class="hl" style="animation-delay:-3.00s"/>
+  </g>
+  <line x1="0" y1="300" x2="1200" y2="300" stroke="#f472b6" stroke-width="2" opacity=".9"/>
+  <text x="600.0" y="196" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Ubuntu, Arial, sans-serif" font-size="116" font-weight="900" letter-spacing="6" fill="url(#tg)" filter="url(#glow)" class="pulse">PAUL-SIXT</text>
+  <text x="600.0" y="196" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Ubuntu, Arial, sans-serif" font-size="116" font-weight="900" letter-spacing="6" fill="#22d3ee" class="gl">PAUL-SIXT</text>
+  <text x="600.0" y="196" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Ubuntu, Arial, sans-serif" font-size="116" font-weight="900" letter-spacing="6" fill="#f472b6" class="gl gl2">PAUL-SIXT</text>
+  <g class="title"><text x="600.0" y="196" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Ubuntu, Arial, sans-serif" font-size="116" font-weight="900" letter-spacing="6" fill="url(#tg)">PAUL-SIXT</text></g>
+  <g clip-path="url(#tclip)"><rect class="sweep" x="0" y="60" width="160" height="170" fill="url(#shine)" opacity=".7"/></g>
+  <g class="sub">
+    <text x="600.0" y="252" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="22" letter-spacing="5" fill="#cbd5e1" textLength="460" lengthAdjust="spacing">&lt;/&gt; code · create · repeat</text>
+    <rect class="cur" x="842.0" y="235" width="12" height="22" fill="#22d3ee"/>
+  </g>
+</g>
+<rect x="1" y="1" width="1198" height="418" rx="25" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="2"/>
+<rect x="1" y="1" width="1198" height="418" rx="25" fill="none" stroke="url(#border)" stroke-width="3" class="run" stroke-linecap="round"/>
+</svg>
