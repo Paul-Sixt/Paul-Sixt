@@ -33,7 +33,7 @@
   <rect width="1000" height="520" fill="url(#bg)"/>
   <circle cx="44" cy="38" r="6" fill="#34d399" class="live"/>
   <text x="60" y="43" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" font-weight="700" fill="#e6edf3">github.stats<tspan fill="#8b949e"> --user paul-sixt</tspan></text>
-  <text x="970" y="43" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" fill="#8b949e">updated 2026-11-22</text>
+  <text x="970" y="43" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" fill="#8b949e">updated 2026-11-23</text>
   <g class="pop" style="animation-delay:0.15s">
   <rect x="30" y="70" width="180" height="110" rx="14" fill="#111827" stroke="#1f2937"/>
   <rect x="30" y="70" width="180" height="110" rx="14" fill="#22d3ee" opacity=".05"/>
